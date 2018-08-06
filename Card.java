@@ -27,6 +27,7 @@ private static final String CARD_BACKGROUND = "Resources/imgs/Cards/background.p
 private Suit suit;
 private Value value;
 private boolean faceUp;
+private boolean draggable;
 
 //Images for front and back of card
 private Image cardFace;
@@ -38,6 +39,7 @@ private Image cardBack;
  */
 public Card() {
         faceUp = false;
+        draggable = false;
 }
 
 /**
@@ -52,6 +54,7 @@ public Card(Suit suit, Value value)
         this.suit = suit;
         this.value = value;
         faceUp = false;
+        draggable = false;
 
         setFaceImage();
         setBackImage();
@@ -112,6 +115,15 @@ public boolean isRed()
 }
 
 /**
+ * isDraggable: can the current card be dragged (moved)
+ * @return [true if card can be moved, false otherwise]
+ */
+public boolean isDraggable()
+{
+        return draggable;
+}
+
+/**
  * flipCard: flip the card over - face up or face down
  */
 public void flipCard()
@@ -134,6 +146,15 @@ public void setFaceImage()
                 System.out.println("Cannot load image " + path);
                 cardFace = null;
         }
+}
+
+/**
+ * setDraggable: set if a card can be moved or not
+ * @param draggable [boolean: if card can be moved or not]
+ */
+public void setDraggable(boolean draggable)
+{
+        this.draggable = draggable;
 }
 
 /**
