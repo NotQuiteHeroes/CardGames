@@ -1,6 +1,5 @@
-class Value
-{
-public static enum Value
+
+public enum Value
 {
         ACE,
         TWO,
@@ -15,5 +14,4 @@ public static enum Value
         JACK,
         QUEEN,
         KING;
-}
 }

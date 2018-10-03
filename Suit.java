@@ -1,10 +1,8 @@
-class Suit
-{
-public static enum Suit
+
+public enum Suit
 {
         HEARTS,
         SPADES,
         DIAMONDS,
         CLUBS;
-}
 }

@@ -1,3 +1,6 @@
+import java.util.Stack;
+import java.util.*;
+
 class Deck
 {
 private Stack<Card> deck;;
@@ -57,5 +60,4 @@ public void shuffle()
         Collections.shuffle(deck);
 }
 
-public
 }

@@ -1,5 +1,6 @@
 import javafx.scene.image.*;
-
+import java.util.*;
+import javafx.scene.shape.Rectangle;
 /**
  * Card
  * Holds single card information
@@ -15,7 +16,7 @@ import javafx.scene.image.*;
  *      -retrieve color of card
  *      -overrides comparison of cards(compareTo and equals)
  */
-class Card
+class Card extends Rectangle implements Comparable<Card>
 {
 
 //image path resources
@@ -28,6 +29,8 @@ private Suit suit;
 private Value value;
 private boolean faceUp;
 private boolean draggable;
+private static final int HEIGHT = 150;
+private static final int WIDTH = 99;
 
 //Images for front and back of card
 private Image cardFace;
@@ -58,6 +61,17 @@ public Card(Suit suit, Value value)
 
         setFaceImage();
         setBackImage();
+}
+
+
+public int getCardHeight()
+{
+        return HEIGHT;
+}
+
+public int getCardWidth()
+{
+        return WIDTH;
 }
 
 /**
@@ -111,7 +125,7 @@ public boolean isFaceUp()
  */
 public boolean isRed()
 {
-        return (suit.equals(HEARTS) || suit.equals(DIAMONDS));
+        return (suit.equals(Suit.HEARTS) || suit.equals(Suit.DIAMONDS));
 }
 
 /**
@@ -181,9 +195,9 @@ public String getImagePath()
 {
         return new StringBuilder()
                .append(IMAGE_FOLDER)
-               .append(Value.value.name())
+               .append(value.name())
                .append("_")
-               .append(Suit.suit.name())
+               .append(suit.name())
                .append(IMAGE_TYPE)
                .toString();
 }
@@ -196,7 +210,7 @@ public String getImagePath()
  *                  n < 0: current card is lower than provided card
  *                  n = 0: cards are of equal value]
  */
-@Override
+//@Override
 public int compareTo(Card card)
 {
         return this.suit.compareTo(card.suit);
@@ -206,13 +220,13 @@ public int compareTo(Card card)
  * equals: overrides. Check if two cards are the same
  * @param  obj [Card to check equality of]
  * @return     [true if current card and provided card
- *              are of same rank and suit]
+ *              are of same value and suit]
  */
 @Override
 public boolean equals(Object obj)
 {
         Card card = (Card) obj;
-        return rank == card.rank && suit == card.suit;
+        return value == card.value && suit == card.suit;
 }
 
 /**

@@ -1,0 +1,71 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ACE	Value.java	/^        ACE,$/;"	e	enum:Value	file:
+CARD_BACKGROUND	Card.java	/^private static final String CARD_BACKGROUND = "Resources\/imgs\/Cards\/background.png";$/;"	f	class:Card	file:
+CLUBS	Suit.java	/^        CLUBS;$/;"	e	enum:Suit	file:
+Card	Card.java	/^class Card extends Rectangle implements Comparable<Card>$/;"	c
+Card	Card.java	/^public Card() {$/;"	m	class:Card
+Card	Card.java	/^public Card(Suit suit, Value value)$/;"	m	class:Card
+DIAMONDS	Suit.java	/^        DIAMONDS,$/;"	e	enum:Suit	file:
+Deck	Deck.java	/^class Deck$/;"	c
+Deck	Deck.java	/^public Deck()$/;"	m	class:Deck
+DrawTest	DrawTest.java	/^public class DrawTest extends Application$/;"	c
+EIGHT	Value.java	/^        EIGHT,$/;"	e	enum:Value	file:
+FIVE	Value.java	/^        FIVE,$/;"	e	enum:Value	file:
+FOUR	Value.java	/^        FOUR,$/;"	e	enum:Value	file:
+HEARTS	Suit.java	/^        HEARTS,$/;"	e	enum:Suit	file:
+HEIGHT	Card.java	/^private static final int HEIGHT = 150;$/;"	f	class:Card	file:
+IMAGE_FOLDER	Card.java	/^private static final String IMAGE_FOLDER = "Resources\/imgs\/Cards\/";$/;"	f	class:Card	file:
+IMAGE_TYPE	Card.java	/^private static final String IMAGE_TYPE = ".png";$/;"	f	class:Card	file:
+JACK	Value.java	/^        JACK,$/;"	e	enum:Value	file:
+KING	Value.java	/^        KING;$/;"	e	enum:Value	file:
+NINE	Value.java	/^        NINE,$/;"	e	enum:Value	file:
+QUEEN	Value.java	/^        QUEEN,$/;"	e	enum:Value	file:
+SEVEN	Value.java	/^        SEVEN,$/;"	e	enum:Value	file:
+SIX	Value.java	/^        SIX,$/;"	e	enum:Value	file:
+SPADES	Suit.java	/^        SPADES,$/;"	e	enum:Suit	file:
+Suit	Suit.java	/^public enum Suit$/;"	g
+TEN	Value.java	/^        TEN,$/;"	e	enum:Value	file:
+THREE	Value.java	/^        THREE,$/;"	e	enum:Value	file:
+TWO	Value.java	/^        TWO,$/;"	e	enum:Value	file:
+Value	Value.java	/^public enum Value$/;"	g
+WIDTH	Card.java	/^private static final int WIDTH = 99;$/;"	f	class:Card	file:
+cardBack	Card.java	/^private Image cardBack;$/;"	f	class:Card	file:
+cardFace	Card.java	/^private Image cardFace;$/;"	f	class:Card	file:
+compareTo	Card.java	/^public int compareTo(Card card)$/;"	m	class:Card
+deck	Deck.java	/^private Stack<Card> deck;;$/;"	f	class:Deck	file:
+deck	DrawTest.java	/^Deck deck;$/;"	f	class:DrawTest
+draggable	Card.java	/^private boolean draggable;$/;"	f	class:Card	file:
+drawOne	Deck.java	/^public Card drawOne()$/;"	m	class:Deck
+equals	Card.java	/^public boolean equals(Object obj)$/;"	m	class:Card
+faceUp	Card.java	/^private boolean faceUp;$/;"	f	class:Card	file:
+flipCard	Card.java	/^public void flipCard()$/;"	m	class:Card
+getCardBack	Card.java	/^public Image getCardBack()$/;"	m	class:Card
+getCardFace	Card.java	/^public Image getCardFace()$/;"	m	class:Card
+getCardHeight	Card.java	/^public int getCardHeight()$/;"	m	class:Card
+getCardWidth	Card.java	/^public int getCardWidth()$/;"	m	class:Card
+getImagePath	Card.java	/^public String getImagePath()$/;"	m	class:Card
+getSize	Deck.java	/^public int getSize()$/;"	m	class:Deck
+getSuit	Card.java	/^public Suit getSuit()$/;"	m	class:Card
+getValue	Card.java	/^public Value getValue()$/;"	m	class:Card
+isDraggable	Card.java	/^public boolean isDraggable()$/;"	m	class:Card
+isFaceUp	Card.java	/^public boolean isFaceUp()$/;"	m	class:Card
+isRed	Card.java	/^public boolean isRed()$/;"	m	class:Card
+main	DrawTest.java	/^public static void main(String[] args)$/;"	m	class:DrawTest
+rootStack	DrawTest.java	/^StackPane rootStack = new StackPane();$/;"	f	class:DrawTest
+row	DrawTest.java	/^Group row = new Group();$/;"	f	class:DrawTest
+selectedCard	DrawTest.java	/^Card selectedCard;$/;"	f	class:DrawTest
+setBackImage	Card.java	/^public void setBackImage()$/;"	m	class:Card
+setDraggable	Card.java	/^public void setDraggable(boolean draggable)$/;"	m	class:Card
+setFaceImage	Card.java	/^public void setFaceImage()$/;"	m	class:Card
+setSize	Deck.java	/^public void setSize(int sizeChange)$/;"	m	class:Deck
+shuffle	Deck.java	/^public void shuffle()$/;"	m	class:Deck
+size	Deck.java	/^int size;$/;"	f	class:Deck
+start	DrawTest.java	/^public void start(Stage stage)$/;"	m	class:DrawTest
+suit	Card.java	/^private Suit suit;$/;"	f	class:Card	file:
+toString	Card.java	/^public String toString()$/;"	m	class:Card
+value	Card.java	/^private Value value;$/;"	f	class:Card	file:
