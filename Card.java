@@ -3,18 +3,39 @@ import java.util.*;
 import javafx.scene.shape.Rectangle;
 /**
  * Card
+ *
+ * Contructors:
+ *     Default:      Card()
+ *     Non-Default:  Card(Suit suit, Value value)
+ *     Non-Default:  Card(String blankCard)
+ *
+ * Measurements:
+ *      -get card height and width
+ *          [Int getCardHeight(), Int getCardWidth()]
  * Holds single card information
  *      -suit and value
+ *          [Suit suit, Value value]
  *      -if the card is face up or not
+ *          [Boolean faceUp]
  *      -front and back image
+ *          [Image cardFace, cardBack]
+ *      -blank card for drawing purposes
  * Includes methods to act upon card
  *      -get suit and value
+ *          [Suit getSuit(), Value getValue()]
  *      -get string format "VALUE of SUIT"
+ *          [OVERRIDDEN: String toString()]
  *      -get position of card face (face down or not)
+ *          [Boolean isFaceUp()]
  *      -set image for front and back of card
+ *          [Void setFaceImage(), Void setBackImage()]
  *      -flip card (face down or face up)
+ *          [Void flipCard()]
  *      -retrieve color of card
+ *           [Boolean isRed()]
  *      -overrides comparison of cards(compareTo and equals)
+ *          [OVERRIDDEN: Int compareTo(Card card)]
+ *          [OVERRIDDEN: Boolean equals(Object obj)]
  */
 class Card extends Rectangle implements Comparable<Card>
 {
@@ -63,6 +84,17 @@ public Card(Suit suit, Value value)
         setBackImage();
 }
 
+/**
+ * Card: non-default constructor
+ * create blank card for drawing purposes
+ * @param blankCard [String: BLANK]
+ */
+public Card(String blankCard)
+{
+        faceUp = false;
+        draggable = false;
+        setBackImage();
+}
 
 public int getCardHeight()
 {
