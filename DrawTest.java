@@ -199,7 +199,7 @@ public Scene setUpScene()
 
 public void dealSolitaire()
 {
-        drawSeven();
+        //drawSeven();
         boolean isFaceUp = false;
         //draw other seven cards on screen
         for(int pile = 0; pile < 7; pile++)
@@ -209,7 +209,15 @@ public void dealSolitaire()
                         Card newCard = deck.drawOne();
                         logging(newCard);
 
-                        cardY = cardHeight + 35 * (card + 1);
+                        if(card == 0)
+                        {
+                                cardY = cardHeight + 45;
+                        }
+                        else
+                        {
+                                cardY = (cardHeight + 45) + card * 15;
+                        }
+
                         setCardX(pile, card);
 
                         if(card == pile)
